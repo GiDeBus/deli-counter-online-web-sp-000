@@ -21,14 +21,25 @@ def take_a_number(katz_deli, name)
   number_in_line = katz_deli.length
   puts "Welcome, #{name}. You are number #{number_in_line} in line."
 end
+#def now_serving(katz_deli)
+ # if katz_deli.empty?
+  #  puts "There is nobody waiting to be served!"  
+  #else
+   # katz_deli.each do |customer|
+    #  puts "Currently serving #{katz_deli[0]}."
+     # katz_deli.shift
+  #  end
+#  end
+#end
 
-def now_serving(katz_deli)
-  if katz_deli.empty?
-    puts "There is nobody waiting to be served!"  
-  else
-    katz_deli.each do |customer|
-      puts "Currently serving #{katz_deli[0]}."
-      katz_deli.shift
+def now_serving(array)
+  queue = Queue.new
+  queue = array
+    
+    if array.length > 0
+    puts "Currently serving #{array[0]}."
+    array.shift
+    else
+    puts "There is nobody waiting to be served!"
     end
-  end
 end
