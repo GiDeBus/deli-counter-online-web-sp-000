@@ -22,13 +22,11 @@ def take_a_number(katz_deli, name)
   puts "Welcome, #{name}. You are number #{number_in_line} in line."
 end
 
-def now_serving(katz_deli)
-  if katz_deli.empty?
-    puts "There is nobody waiting to be served!"  
+def now_serving(deli)
+  if deli.empty?
+    puts "There is nobody waiting to be served!"
   else
-    katz_deli.each do |customer|
-      puts "Currently serving #{katz_deli[0]}."
-      katz_deli.shift
-    end
+    puts "Currently serving #{deli.first}."
+    deli.shift
   end
 end
